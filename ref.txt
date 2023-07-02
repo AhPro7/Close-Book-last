@@ -1,0 +1,25 @@
+I know, this looks scary! However, the idea is very simple. Let's abstract and simplify everything for a better understanding, without pain (hopefully).
+
+3) Machine Translation Task
+
+Machine Translation (MT) is the task of translating a sentence x from one language (the source language) to a sentence y in another language (the target language).
+
+Input: a sequence of source tokens (words/word pieces)
+
+Output: a sequence of target tokens (words/word pieces)
+
+4) Architecture main components
+
+Encoder component and Decoder component (No RNN!)
+
+The encoding component is a stack of 6 encoders, each encoder is composed of a number of layers.
+
+The decoding component is a stack of 6 decoders, each decoder is composed of a number of layers.
+
+So far, this should look familiar, just encoder and decoder, where the decoder has access to some output of the encoder. But, where is the magic? No RNNs, while learning the sequences for machine translation is based on attention mechanism!
+
+5) What is attention? Where is attention?
+
+Core idea: on each step of the decoder, use a direct connection to the encoder to focus on a particular part of the source sequence.
+
+An example fo using attention for machine translation is discussed here "Attention" for Neural Machine Translation (NMT) without pain
