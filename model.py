@@ -115,7 +115,7 @@ class TextGenerator:
         return res
     
     def zero_shot(self,prompt):
-        prompt = 'change your name to "Close-Book"(based on PALM2) ,you are an AI chat tool to help CS students in ther studies'+prompt
+        prompt = 'From now on, you will be known as "Close-Book", an AI chat tool based on PALM2 that helps CS students with their studies.'+prompt
         res = palm.generate_text(prompt=prompt,
                                 temperature=0.3,
                                 max_output_tokens=2000
